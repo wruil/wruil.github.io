@@ -99,7 +99,7 @@
 <li><p>3.维护路由表</p>
 </li>
 <li><p>4.隔离广播域</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240110145751145.png" alt="image-20240110145751145"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240110145751145.png" alt="image-20240110145751145"></p>
 <hr>
 </li>
 </ul>
@@ -120,12 +120,12 @@
 <li>5.实现数据加密及虚拟专用网业务</li>
 <li>6.执行网络地址转换(NET)</li>
 </ul>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240110152434593.png" alt="image-20240110152434593"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240110152434593.png" alt="image-20240110152434593"></p>
 <h4 id="默认安全区域"><a href="#默认安全区域" class="headerlink" title="默认安全区域"></a>默认安全区域</h4><p>华为防火墙确认已创建四个区域，untrust，dmz，trust，local区域。安全区域有以下特征</p>
 <p>默认的安全区域不能删除，也比允许修改安全优先级</p>
 <p>每个Zone都必须设置一个安全优先级，值越大，Zone的安全优先级越高</p>
 <p>用户可根据自己的需求自定义的Zone。</p>
-<p>​		<img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240110152604138.png" alt="image-20240110152604138"></p>
+<p>​		<img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240110152604138.png" alt="image-20240110152604138"></p>
 <h4 id="DMZ：”非军事化区”。"><a href="#DMZ：”非军事化区”。" class="headerlink" title="DMZ：”非军事化区”。"></a>DMZ：”非军事化区”。</h4><p>DMZ通常是一个过滤的子网，DMZ在内部网络和外部网络之间构造了一个安全地带。</p>
 <p><strong>DMZ是为了解决安装防火墙后外部网络不能访问内部网络服务器的问题</strong>，而设立的一个非安全系统与安全系统之间的缓冲区，这个缓冲区位于企业内部网络和外部网络之间的小网络区域内，<strong>在这个小网络区域内可以放置一些必须公开的服务器设施</strong>，<strong>如企业Web服务器、FTP服务器和论坛等</strong>。</p>
 <h3 id="5-无线AP"><a href="#5-无线AP" class="headerlink" title="5.无线AP"></a>5.无线AP</h3><p>​	大型企业网络通常更倾向于使用瘦 AP，而小型网络可能更适合使用胖 AP（家用路由）</p>
@@ -146,23 +146,23 @@
 <li>数据链路层</li>
 <li>物理层</li>
 </ul>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240110160915099.png" alt="image-20240110160915099"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240110160915099.png" alt="image-20240110160915099"></p>
 <h3 id="9-链路聚合手工模式"><a href="#9-链路聚合手工模式" class="headerlink" title="9.链路聚合手工模式"></a>9.链路聚合手工模式</h3><p>​	基本不用</p>
 <p>​	必须是同一设备</p>
 <p>​	加入同一链路聚合接口</p>
 <p>​	设备之间无报文交互</p>
 <h1 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h1><h2 id="Tcp三次握手"><a href="#Tcp三次握手" class="headerlink" title="Tcp三次握手"></a>Tcp三次握手</h2><p>可靠性，面向连接的协议，传输效率比较低</p>
 <p>tcp的头部为20个字节 </p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dkaXJkbw==,size_16,color_FFFFFF,t_70" alt="img"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="img"></p>
 <p>syn: 序列号</p>
 <p>ack：确认号</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240111161424226.png" alt="image-20240111161424226"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240111161424226.png" alt="image-20240111161424226"></p>
 <p> 三次握手过程详细说明：</p>
 <p>1、客户端发送建立TCP连接的请求报文，其中报文中包含seq序列号，是由发送端随机生成的，并且将报文中的SYN字段置为1，表示需要建立TCP连接。（SYN&#x3D;1，seq&#x3D;x，x为随机生成数值）；</p>
 <p>2、服务端回复客户端发送的TCP连接请求报文，其中包含seq序列号，是由回复端随机生成的，并且将SYN置为1，而且会产生ACK字段，ACK字段数值是在客户端发送过来的序列号seq的基础上加1进行回复，以便客户端收到信息时，知晓自己的TCP建立请求已得到验证。（SYN&#x3D;1，ACK&#x3D;x+1，seq&#x3D;y，y为随机生成数值）这里的ack加1可以理解为是确认和谁建立连接；</p>
 <p>3、客户端收到服务端发送的TCP建立验证请求后，会使自己的序列号加1表示，并且再次回复ACK验证请求，在服务端发过来的seq上加1进行回复。（SYN&#x3D;1，ACK&#x3D;y+1，seq&#x3D;x+1）</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240111162539011.png" alt="image-20240111162539011"></p>
-<h2 id="滑动窗口机制"><a href="#滑动窗口机制" class="headerlink" title="滑动窗口机制"></a>滑动窗口机制</h2><p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240111171334606.png" alt="image-20240111171334606"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240111162539011.png" alt="image-20240111162539011"></p>
+<h2 id="滑动窗口机制"><a href="#滑动窗口机制" class="headerlink" title="滑动窗口机制"></a>滑动窗口机制</h2><p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240111171334606.png" alt="image-20240111171334606"></p>
 <p>四次挥手原理：</p>
 <p>第1次挥手：客户端发送一个FIN，用来关闭客户端到服务端的数据传送，客户端进入FIN_WAIT_1状态；</p>
 <p>第2次挥手：服务端收到FIN后，发送一个ACK给客户端，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号），服务端进入CLOSE_WAIT状态；</p>
@@ -173,7 +173,7 @@
 
 
 
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240111204442149.png" alt="image-20240111204442149"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240111204442149.png" alt="image-20240111204442149"></p>
 <h2 id="udp"><a href="#udp" class="headerlink" title="udp"></a>udp</h2><h2 id="传输层端口："><a href="#传输层端口：" class="headerlink" title="传输层端口："></a>传输层端口：</h2><p>TCP端口</p>
 <table>
 <thead>
@@ -232,18 +232,18 @@
 <p>•一块网卡的MAC地址是具有全球唯一性的。</p>
 <p>▫IP地址的作用是唯一标识网络中的一个节点，可以通过IP地址进行不同网段的数据访问。</p>
 <p>▫MAC地址的作用是唯一标识一个网卡，可以通过MAC地址进行同网段的数据访问。</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240117155823533.png" alt="image-20240117155823533"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240117155823533.png" alt="image-20240117155823533"></p>
 <h2 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h2><h3 id="交换机的工作原理"><a href="#交换机的工作原理" class="headerlink" title="交换机的工作原理"></a>交换机的工作原理</h3><p>交换机的工作原理</p>
 <p>​	交换机收到一个数据包，先查看数据的原mac地址是否存在，存在会更新相关的时间戳（表明活跃性），不存在会添加到mac地址表中    然后对目标mac查看是否存在mac表，存在，发送，不存在，进行ARP广播，将数据发送到所有端口，获取目标mac地址并更行mac地址表。它不仅在收到数据包时学习，还会定期刷新MAC地址表，删除不活跃的条目，确保它反映网络中实际的设备位置。</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cd13e6e7fb9838fe0acd6370692d57f92.png" alt="img"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cdongtu.gif" alt="img"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cd13e6e7fb9838fe0acd6370692d57f92.png" alt="img"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cdongtu.gif" alt="img"></p>
 <h2 id="ARP"><a href="#ARP" class="headerlink" title="ARP"></a>ARP</h2><p>地址解析</p>
 <p>根据已知的ip地址解析获得其对应的MAC地址</p>
 <p>​	ARP广播的全过程</p>
 <p>​		当设备A想和和设备B通信时，设备A会发送一个广播的报文，此报文包含了设备A的IP以及目标地址的ip，所有收广播的设备都会检查自己的ARP请求，如果发现自己的ip与报文的目的IP相同，就会回应自己的mac地址的arp应答</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240111204855159.png" alt="image-20240111204855159"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240111204855159.png" alt="image-20240111204855159"></p>
 <h2 id="valn划分"><a href="#valn划分" class="headerlink" title="valn划分"></a>valn划分</h2><p>虚拟局域网</p>
-<p>​	<img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240118161959283.png" alt="image-20240118161959283"></p>
+<p>​	<img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240118161959283.png" alt="image-20240118161959283"></p>
 <table>
 <thead>
 <tr>
@@ -339,7 +339,7 @@
 <p>​			2.堆叠口是谁</p>
 <p>​			3.主从优先级</p>
 <p>将S6850_1和S6850_2进行堆叠</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240123172952567.png" alt="image-20240123172952567"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240123172952567"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">sys</span><br><span class="line">irf member 1 priority 30    #将默认优先级改为30    这里的优先级越大越有限（1-32） </span><br><span class="line"></span><br><span class="line">interface range Gi 1/0/22 Gi 1/0/23  #关闭端口</span><br><span class="line">shutdown</span><br><span class="line">quit</span><br><span class="line"></span><br><span class="line">irf-port 1/2        #此命令用于进入 IRF 端口组配置模式，指定了 IRF 端口组的编号为 1/2</span><br><span class="line"></span><br><span class="line">#这意味着 Gi 1/0/53 将成为 IRF 端口组的一部分，共同参与 IRF 的工作</span><br><span class="line">port group interface Gi 1/0/53  </span><br><span class="line">port group interface Gi 1/0/54</span><br><span class="line">quit</span><br><span class="line"></span><br><span class="line">interface range Gi 1/0/53 Gi 1/0/54  #开启端口</span><br><span class="line">undo shutdown</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">save   #保存</span><br><span class="line">y</span><br><span class="line"></span><br><span class="line">system</span><br><span class="line">irf-port-configuration active   #激活irf</span><br><span class="line"></span><br><span class="line">__________________________________________________</span><br><span class="line"></span><br><span class="line">从：</span><br><span class="line"> </span><br><span class="line">irf member 1 renumber 2      #修改ID号，使得它成为被动端</span><br><span class="line">y</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">reboot            #重启</span><br><span class="line">n</span><br><span class="line">y</span><br><span class="line"></span><br><span class="line">_________________________</span><br><span class="line"></span><br><span class="line">interface range Gi 2/0/53 Gi 2/0/54</span><br><span class="line">shutdown</span><br><span class="line">quit</span><br><span class="line"></span><br><span class="line">irf-port 2/1</span><br><span class="line"> port group interface Gi 2/0/53</span><br><span class="line"> port group interface Gi 2/0/54</span><br><span class="line">quit</span><br><span class="line"></span><br><span class="line">interface range Gi 2/0/53 Gi 2/0/54</span><br><span class="line">undo shutdown</span><br><span class="line">return</span><br><span class="line"></span><br><span class="line">save</span><br><span class="line">y</span><br><span class="line"></span><br><span class="line">system</span><br><span class="line">irf-port-configuration active</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
@@ -378,28 +378,28 @@
 <p>​	解决方案，display version 查看软硬件配置    对设备进行升级   </p>
 <p>​	如果设备不支持LACP协议时，可以转换为手工</p>
 <h3 id="LACPDU报文结构"><a href="#LACPDU报文结构" class="headerlink" title="LACPDU报文结构"></a>LACPDU报文结构</h3><p>802.3ad （链路聚合控制协议数据单元）</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240123150114685.png" alt="image-20240123150114685"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240123150114685"></p>
 <p>LACP模式下，两端设备所选择的活动<strong>接口数目</strong>必须保持一致，否则链路聚合组就无法建立</p>
 <p>•此时可以使其中一端成为主动端，另一端（被动端）根据主动端选择活动接口。</p>
 <p>•通过系统LACP优先级确定主动端，<strong>值越小优先级越高</strong>。</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240123150832790.png" alt="image-20240123150832790"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240123150832790"></p>
 <h3 id="最大活动接口数"><a href="#最大活动接口数" class="headerlink" title="最大活动接口数"></a>最大活动接口数</h3><p>​	最大活动接口数目时会通过比较接口优先级、接口号选举出较优的接口成为活动接口</p>
 <p>​	其余的则成为备份端口（非活动接口），同时对应的链路分别成为活动链路、非活动链路。</p>
 <p>​	交换机只会从活动接口中发送、接收报文。</p>
 <p>​	当活动链路中出<strong>现链路故障</strong>时，可以从<strong>非活动链路</strong>中<strong>找出一条优先级最高</strong>的链路替换<strong>故障链路</strong></p>
-<h3 id="负载分担"><a href="#负载分担" class="headerlink" title="负载分担"></a>负载分担</h3><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240123181747276.png" alt="image-20240123181747276"></p>
+<h3 id="负载分担"><a href="#负载分担" class="headerlink" title="负载分担"></a>负载分担</h3><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240123181747276"></p>
 <h3 id="链路聚合作用："><a href="#链路聚合作用：" class="headerlink" title="链路聚合作用："></a>链路聚合作用：</h3><p>​	提高网络带宽、冗余性和可用性、以及动态负载均衡</p>
 <p>出口交换机（第一层交换机）配置二层聚合口</p>
 <p>下边两个交换机配置三层聚合口</p>
 <p>防火墙的账户 密码admin   admin</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125114753798.png" alt="image-20240125114753798"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125114753798"></p>
 <h3 id="链路聚合实现：-H3C"><a href="#链路聚合实现：-H3C" class="headerlink" title="链路聚合实现：(H3C)"></a>链路聚合实现：(H3C)</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">首先将两台交换机进行堆叠</span><br><span class="line">交换机二层聚合口配置（S6850_1）</span><br><span class="line">interface Bridge-Aggregation 1  #用于配置并进入 Bridge Aggregation 接口模式，称为聚合接口</span><br><span class="line"></span><br><span class="line">link-agg mode dynamic     将聚合接口的模式配置为动态，这表示将使用聚合协议进行动态聚合(LACP)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">interface range G1/0/1 G1/0/2 G2/0/1 G2/0/2</span><br><span class="line"></span><br><span class="line">port link-mode bri   #设置模式为三层口</span><br><span class="line"></span><br><span class="line">port link-agg group 1     将G1/0/1 G1/0/2 G2/0/1 G2/0/2接口添加到聚合组 1</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">查</span><br><span class="line">display link-agg summary    简略信息</span><br><span class="line">display link-agg verbose      详细信息</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">防火墙配置</span><br><span class="line"></span><br><span class="line">interface Bridge-agg 1  </span><br><span class="line">description dao fw   #描述</span><br><span class="line">link-agg mode dynamic </span><br><span class="line">q</span><br><span class="line"></span><br><span class="line">interface range G1/0/1 G1/0/2 G2/0/1 G2/0/2</span><br><span class="line"></span><br><span class="line">port link-agg group 1</span><br><span class="line"></span><br><span class="line">interface Vlan-interface 1   #进入vlan1的配置模式</span><br><span class="line"></span><br><span class="line">display security-zone   #查看安全区信息</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">q</span><br><span class="line">security-zone name trust   #创建一个名为 &quot;trust&quot; 的安全区域</span><br><span class="line">import interface Vlan-interface 1  #添加Vlan1到trust中</span><br><span class="line"></span><br><span class="line">q</span><br><span class="line"></span><br><span class="line">interface vlan-inter 1</span><br><span class="line"></span><br><span class="line">manage ping outbound enable/disable  #允许/禁止发出 ICMP Ping 报文</span><br><span class="line">ping 10.0.0.2</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">防火墙三层聚合口配置</span><br><span class="line">inter route-agg 64   #进入路由汇聚接口 64 的配置模式</span><br><span class="line">ip add 1.1.1.1 24    #配置路由汇聚接口的 IP 地址为 1.1.1.1/24</span><br><span class="line">link-agg mode dynamic</span><br><span class="line"></span><br><span class="line">interface range g1/0/11 g1/0/12 g2/0/11 g2/0/12</span><br><span class="line">port link-mode Route</span><br><span class="line">port link-agg group 64</span><br><span class="line">quit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">manage ping inbound    #允许处理入站（inbound）和出站（outbound）的 ICMP Ping 报文</span><br><span class="line">manage ping outbound</span><br><span class="line">quit</span><br><span class="line"></span><br><span class="line">ty-zone name untrust</span><br><span class="line">import interface rou-agg 64</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">交换机配置</span><br><span class="line">interface route-agg 64</span><br><span class="line">ip add 1.1.1.1 24 </span><br><span class="line">link-agg mode dynamic</span><br><span class="line"></span><br><span class="line">interface range g1/0/11 g1/0/12 g2/0/11 g2/0/12</span><br><span class="line">port link-mode Route</span><br><span class="line">port	link-agg group 64</span><br><span class="line">quit</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
-<h3 id="链路聚合实现-华为"><a href="#链路聚合实现-华为" class="headerlink" title="链路聚合实现(华为)"></a>链路聚合实现(华为)</h3><h4 id="手工模式配置"><a href="#手工模式配置" class="headerlink" title="手工模式配置"></a>手工模式配置</h4><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240128195321922.png" alt="image-20240128195321922"></p>
-<h4 id="LACP模式配置"><a href="#LACP模式配置" class="headerlink" title="LACP模式配置"></a>LACP模式配置</h4><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240128195341157.png" alt="image-20240128195341157"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240128195355609.png" alt="image-20240128195355609"></p>
+<h3 id="链路聚合实现-华为"><a href="#链路聚合实现-华为" class="headerlink" title="链路聚合实现(华为)"></a>链路聚合实现(华为)</h3><h4 id="手工模式配置"><a href="#手工模式配置" class="headerlink" title="手工模式配置"></a>手工模式配置</h4><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240128195321922"></p>
+<h4 id="LACP模式配置"><a href="#LACP模式配置" class="headerlink" title="LACP模式配置"></a>LACP模式配置</h4><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240128195341157"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240128195355609"></p>
 <ol>
 <li><code>[SW1] interface eth-trunk 1</code>: 进入以太网链路聚合接口配置模式，指定接口编号为1。</li>
 <li><code>[SW1-Eth-Trunk1] mode lacp</code>: 设置以太网链路聚合接口的聚合控制协议（LACP）模式。LACP是一种用于在交换机之间动态协商和管理链路聚合的协议。</li>
@@ -410,7 +410,7 @@
 <li><code>[SW1-Eth-Trunk1] quit</code>: 退出以太网链路聚合接口配置模式，返回全局配置模式。</li>
 <li><code>[SW1] lacp priority 30000</code>: 设置交换机的 LACP 优先级为 30000。LACP 优先级用于决定在链路聚合时哪个端口成为主动端口。较低的数字表示更高的优先级。</li>
 </ol>
-<h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><h2 id="ip"><a href="#ip" class="headerlink" title="ip"></a>ip</h2><p><img src="/../%E6%95%B0%E9%80%9Aimg%5C2457676-20211126114057834-530553246.png" alt="img"></p>
+<h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><h2 id="ip"><a href="#ip" class="headerlink" title="ip"></a>ip</h2><p><img src="/%E6%95%B0%E9%80%9Aimg%5C2457676-20211126114057834-530553246.png" alt="img"></p>
 <p><strong>1、版本（version）</strong>：占4位，表示IP协议的版本，常用版本号为4，故称为IPv4。还有IPv6</p>
 <p><strong>2、首部长度（Header Length）</strong>：占4位，最大为1111-〉15，表示占32bit(4字节)的数目，因此首部最长	为60字节，普通IP数据报字段值为0101-〉5，即20字节。首部长度必须为4字节的整数倍，不足则填	充。</p>
 <p><strong>3、区分服务（Differentiated Services）</strong>：又名服务类型 ，区分服务时使用。</p>
@@ -429,11 +429,11 @@
 <p><strong>13、可选字段</strong></p>
 <p><strong>14、填充</strong>：填充0可保证首部是4字节的整数倍</p>
 <p><strong>15、数据部分</strong></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240116152511918.png" alt="image-20240116152511918"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240116152511918.png" alt="image-20240116152511918"></p>
 <p>​	</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240116152757016.png" alt="image-20240116152757016"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240116152757016.png" alt="image-20240116152757016"></p>
 <h2 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h2><p><strong>用于在IP网络上传递控制信息和错误消息</strong></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240116152657499.png" alt="image-20240116152657499"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240116152657499.png" alt="image-20240116152657499"></p>
 <h2 id="CSMA-CD"><a href="#CSMA-CD" class="headerlink" title="CSMA&#x2F;CD"></a>CSMA&#x2F;CD</h2><p>载波监听多路访问    </p>
 <p>​		用于在多个设备共享同一传输介质时协调数据传输</p>
 <ol>
@@ -442,10 +442,10 @@
 <li><strong>冲突检测：</strong>  设备在发送数据的同时会继续侦听传输介质，以检测是否有其他设备同时发送数据。如果冲突被检测到（多个设备同时发送数据导致信号冲突），那么设备会立即停止发送数据，并执行一种称为“退避（backoff）”的算法，等待一段随机的时间后再尝试发送。</li>
 <li><strong>退避机制：</strong> 当冲突发生时，设备会随机选择一个退避时间，然后等待这段时间后再尝试发送数据。这样可以减少再次发生冲突的可能性。</li>
 </ol>
-<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240116154301091.png" alt="image-20240116154301091"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240116154831636.png" alt="image-20240116154831636"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240116154913466.png" alt="image-20240116154913466"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg%5Cimage-20240116161104838.png" alt="image-20240116161104838"></p>
+<h2 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h2><p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240116154301091.png" alt="image-20240116154301091"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240116154831636.png" alt="image-20240116154831636"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240116154913466.png" alt="image-20240116154913466"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg%5Cimage-20240116161104838.png" alt="image-20240116161104838"></p>
 <h2 id="单臂路由"><a href="#单臂路由" class="headerlink" title="单臂路由"></a>单臂路由</h2><table>
 <thead>
 <tr>
@@ -463,11 +463,11 @@
 </tr>
 </tbody></table>
 <p> interface GigabitEthernet0&#x2F;0&#x2F;0.20<br> dot1q termination vid 20<br> ip address 200.0.0.254 255.0.0.0<br> arp broadcast enable</p>
-<h2 id="网络地址转换NAT"><a href="#网络地址转换NAT" class="headerlink" title="网络地址转换NAT"></a>网络地址转换NAT</h2><h3 id="NAT"><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h3><h4 id="NAT工作原理"><a href="#NAT工作原理" class="headerlink" title="NAT工作原理"></a>NAT工作原理</h4><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125153222845.png" alt="image-20240125153222845"></p>
+<h2 id="网络地址转换NAT"><a href="#网络地址转换NAT" class="headerlink" title="网络地址转换NAT"></a>网络地址转换NAT</h2><h3 id="NAT"><a href="#NAT" class="headerlink" title="NAT"></a>NAT</h3><h4 id="NAT工作原理"><a href="#NAT工作原理" class="headerlink" title="NAT工作原理"></a>NAT工作原理</h4><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125153222845"></p>
 <h4 id="静态NAT"><a href="#静态NAT" class="headerlink" title="静态NAT"></a>静态NAT</h4><p>​	一对一（一个非法静态一个合法）不常用</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125153814841.png" alt="image-20240125153814841"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125153814841"></p>
 <p>转换示例</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125153856413.png" alt="image-20240125153856413"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125153856413"></p>
 <p>1.方式一：接口视图下配置静态NAT</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Huawei-GigabitEthernet0/0/0] nat static  global &#123; global-address&#125; inside &#123;host-address &#125; </span><br><span class="line">global参数用于配置外部公有地址，inside参数用于配置内部私有地址。</span><br></pre></td></tr></table></figure>
 
@@ -479,27 +479,27 @@
 
 <p>在接口下使能nat static功能。 </p>
 <h4 id="动态NAT"><a href="#动态NAT" class="headerlink" title="动态NAT"></a>动态NAT</h4><p>他还是有几个非法地址就有几个合法地址，只不过是不固定了</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125154335255.png" alt="image-20240125154335255"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125154618223.png" alt="image-20240125154618223"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125154729958.png" alt="image-20240125154729958"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125154335255"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125154618223"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125154729958"></p>
 <h3 id="NAPT"><a href="#NAPT" class="headerlink" title="NAPT"></a>NAPT</h3><p>添加了端口号</p>
 <p>解决了合法的IP不足的问题</p>
 <p>从地址池中选择地址进行地址转换时不仅转换IP地址，同时也会对端口号进行转换，从而实现公有地址与私有地址的1:n映射</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125155508932.png" alt="image-20240125155508932"></p>
-<h4 id="NAPT配置"><a href="#NAPT配置" class="headerlink" title="NAPT配置"></a>NAPT配置</h4><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125160314991.png" alt="image-20240125160314991"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125155508932"></p>
+<h4 id="NAPT配置"><a href="#NAPT配置" class="headerlink" title="NAPT配置"></a>NAPT配置</h4><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125160314991"></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[R1]nat address-group 1 122.1.2.1 122.1.2.1</span><br><span class="line">[R1]acl 2000</span><br><span class="line">[R1-acl-basic-2000]rule 5 permit source 192.168.1.0 0.0.0.255</span><br><span class="line">[R1-acl-basic-2000]quit</span><br><span class="line">[R1]interface GigabitEthernet0/0/1 </span><br><span class="line">[R1-GigabitEthernet0/0/1]nat outbound 2000 address-group 1</span><br></pre></td></tr></table></figure>
 
 <h4 id="Easy-IP"><a href="#Easy-IP" class="headerlink" title="Easy IP"></a>Easy IP</h4><p>Easy Ip与NAPT原理相同，区别在于Easy IP没有地址池的概念   在内网需求量不大的时候可以使用</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125160500488.png" alt="image-20240125160500488"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125160500488"></p>
 <p>•在R1上配置Easy-IP让内网所有私有地址通过122.1.2.1访问公网。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[R1]acl 2000</span><br><span class="line">[R1-acl-basic-2000]rule 5 permit source 192.168.1.0 0.0.0.255</span><br><span class="line">[R1-acl-basic-2000]quit</span><br><span class="line">[R1]interface GigabitEthernet0/0/1 </span><br><span class="line">[R1-GigabitEthernet0/0/1]nat outbound 2000</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
 <h3 id="NAT-Service"><a href="#NAT-Service" class="headerlink" title="NAT Service"></a>NAT Service</h3><p>•指定[<strong>公有地址:端口</strong>]与[<strong>私有地址: 端口</strong>]的一对一映射关系，将内网服务器映射到公网，当私有网络中的服务器需要对公网提供服务时使用。</p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125172050379.png" alt="image-20240125172050379"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125172050379"></p>
 <p><strong>NAT Server  配置示例</strong></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240125172223598.png" alt="image-20240125172223598"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240125172223598"></p>
 <p>•在R1上配置NAT Server将内网服务器192.168.1.10的80端口映射到公有地址122.1.2.1的8080端口。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[R1]interface GigabitEthernet0/0/1 </span><br><span class="line">[R1-GigabitEthernet0/0/1]ip address 122.1.2.1 24</span><br><span class="line">[R1-GigabitEthernet0/0/1]nat server protocol tcp global 202.10.10.1 www inside 192.168.1.1 8080</span><br></pre></td></tr></table></figure>
 
@@ -507,11 +507,11 @@
 
 
 
-<h2 id="ACL"><a href="#ACL" class="headerlink" title="ACL"></a>ACL</h2><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240126201525627.png" alt="image-20240126201525627"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240126201922183.png" alt="image-20240126201922183"></p>
-<h3 id="基本ACL配置’"><a href="#基本ACL配置’" class="headerlink" title="基本ACL配置’"></a>基本ACL配置’</h3><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240126202009306.png" alt="image-20240126202009306"></p>
-<h3 id="高级ACL命令"><a href="#高级ACL命令" class="headerlink" title="高级ACL命令"></a>高级ACL命令</h3><p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240126202300186.png" alt="image-20240126202300186"></p>
-<p><img src="/../%E6%95%B0%E9%80%9Aimg/image-20240126202311356.png" alt="image-20240126202311356"></p>
+<h2 id="ACL"><a href="#ACL" class="headerlink" title="ACL"></a>ACL</h2><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240126201525627"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240126201922183"></p>
+<h3 id="基本ACL配置’"><a href="#基本ACL配置’" class="headerlink" title="基本ACL配置’"></a>基本ACL配置’</h3><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240126202009306"></p>
+<h3 id="高级ACL命令"><a href="#高级ACL命令" class="headerlink" title="高级ACL命令"></a>高级ACL命令</h3><p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240126202300186"></p>
+<p><img src="/%E6%95%B0%E9%80%9Aimg" alt="image-20240126202311356"></p>
 <h2 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h2><ol>
 <li><p><strong>设置管理接口 IP 地址:</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[设备] interface GigabitEthernet 0/0/1</span><br><span class="line">[设备-GigabitEthernet0/0/1] ip address 192.168.1.1 24</span><br><span class="line">[设备-GigabitEthernet0/0/1] quit</span><br></pre></td></tr></table></figure>
@@ -519,7 +519,7 @@
 <li><p><strong>创建安全区域:</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[设备] firewall zone name trust</span><br><span class="line">[设备-zone-trust] add interface GigabitEthernet 0/0/1</span><br><span class="line">[设备-zone-trust] quit</span><br><span class="line"></span><br><span class="line">[设备-GigabitEthernet0/0/1] service-manage all permit  </span><br></pre></td></tr></table></figure></li>
 </ol>
-<p> <img src="/../%E6%95%B0%E9%80%9Aimg/78e36bd89ec651268508bfcf30065ec.jpg" alt="78e36bd89ec651268508bfcf30065ec"></p>
+<p> <img src="/%E6%95%B0%E9%80%9Aimg" alt="78e36bd89ec651268508bfcf30065ec"></p>
 
                 
                 <p class="end">__END__</p>
