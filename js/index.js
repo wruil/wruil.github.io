@@ -164,7 +164,7 @@
         APlayer: {
             container: '.aplayer',
             fixed: true,
-            autoplay: false, 
+            autoplay: true, 
             loop: 'all',
             order: 'random', 
             preload: 'auto',
@@ -188,7 +188,7 @@
             server: 'netease', 
             type: 'playlist', 
             fixed: true, 
-            autoplay: false, 
+            autoplay: true, 
             loop: 'all', 
             order: 'random', 
             preload: 'auto', 
