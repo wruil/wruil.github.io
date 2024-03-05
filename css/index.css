@@ -2,7 +2,7 @@
 
 #content .articles {
 	float: none;
-	width: auto
+	width: auto;
 }
 
 .article {
@@ -11,7 +11,11 @@
 	margin: 0 auto;
 	padding: 3.5rem 0;
 	border-bottom: #EBF2F6 1px solid;
-	word-wrap: break-word
+	word-wrap: break-word;
+	background-image: url(../image/header/home-one.webp);
+	background-size: cover;
+    background-repeat: no-repeat;
+	opacity: 0.5;
 }
 
 .article:last-child {
@@ -42,7 +46,8 @@
 
 .article-title a:visited, 
 .article-title a:active {
-	color: #4A4A4A;
+	/* color: #4A4A4A; */
+	color: #000;
 	transition: color .3s ease
 }
 
