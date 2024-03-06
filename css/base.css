@@ -398,11 +398,11 @@ mjx-container {
 	-o-text-overflow: ellipsis;
 	text-overflow: ellipsis;
 	/* background:#4c6997; */
-	background-image: linear-gradient(blue,white);
-	opacity: 0.4;
+	background-image: linear-gradient(white,rgba(6, 6, 250,0.3));
 	z-index: 10;
 	border-style: groove;
 	padding:10px;
+	border: none;
 }
 
 #footer {
