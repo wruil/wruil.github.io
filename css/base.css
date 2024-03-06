@@ -44,6 +44,9 @@ body {
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
 	overflow-x: hidden;
+	/* z-index: 0; */
+	/* background-image:url(../image/header/back.jpg); */
+	/* opacity: 0.1; */
 }
 
 ::-webkit-scrollbar {
@@ -393,7 +396,12 @@ mjx-container {
 	box-shadow: 0 0 2rem 1rem rgba(220, 220, 220, .3);
 	-ms-text-overflow: ellipsis;
 	-o-text-overflow: ellipsis;
-	text-overflow: ellipsis
+	text-overflow: ellipsis;
+	/* background:#4c6997; */
+	background-image: linear-gradient(blue,white);
+	opacity: 0.4;
+	z-index: 10;
+	border-style: groove;
 }
 
 #footer {
@@ -404,7 +412,9 @@ mjx-container {
 	text-align: center;
 	color: var(--footer-color);
 	font-size: 1.2rem;
-	line-height: 1.5
+	line-height: 1.5;
+	/* z-index:10; */
+	/* background: #ededed; */
 }
 
 
