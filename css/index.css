@@ -17,6 +17,8 @@
     background-repeat: no-repeat;
 	opacity: 0.8;
 	border-style: outset;
+	margin-top: 10px;
+	border-radius: 14px;
 }
 
 .article:last-child {
